@@ -55,6 +55,11 @@ function record(event){
 				theStep = 'WARNING:: No valid selector found'
 			}
 			chrome.extension.sendRequest({method: "recordStep", data: theStep});
+		    chrome.runtime.sendMessage(
+      		"epjllakmfnkdliefhapbkodmecmneoae", {myCustomMessage: theStep}, 
+      			function(response) { 
+        			console.log("response: "+JSON.stringify(response));
+      		});		   	
 	}
 }
 

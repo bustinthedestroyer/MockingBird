@@ -14,7 +14,7 @@
         return;  // don't allow this extension access
       } else if (request.myCustomMessage) {
         appendLog("from "+sender.id+": "+request.myCustomMessage);
-        storescript(scripttext)
+        //storescript(scripttext)
         sendResponse({"result":"Ok, got your message"});
       } else {
         sendResponse({"result":"I don't understand this message"});

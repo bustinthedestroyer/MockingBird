@@ -4,10 +4,10 @@
 document.getElementById('output').innerHTML = chrome.extension.getBackgroundPage().steps;
 
 if(chrome.extension.getBackgroundPage().paused){
-	document.getElementById('recordButtton').className = 'record';
+	document.getElementById('recordButton').className = 'record';
 	document.getElementById('status').innerHTML = ' Not recording';
 }else{
-	document.getElementById('recordButtton').className = 'recording';
+	document.getElementById('recordButton').className = 'recording';
 	document.getElementById('status').innerHTML = ' Now recording';
 }
 
@@ -25,10 +25,10 @@ window.onload = function(){
 		console.log('pu.record');
 		
 		if(chrome.extension.getBackgroundPage().paused){
-			document.getElementById('recordButtton').className = 'recording';
+			document.getElementById('recordButton').className = 'recording';
 			document.getElementById('status').innerHTML = ' Now recording';
 		}else{
-			document.getElementById('recordButtton').className = 'record';
+			document.getElementById('recordButton').className = 'record';
 			document.getElementById('status').innerHTML = ' Not recording';
 		}
 		
@@ -36,6 +36,6 @@ window.onload = function(){
 		});
 	}
 	
-	document.getElementById('recordButtton').onclick = record;	
+	document.getElementById('recordButton').onclick = record;	
 	document.getElementById('clearButton').onclick = clear;
 }
