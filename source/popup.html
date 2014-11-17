@@ -1,0 +1,77 @@
+<!-- I am the html that is displayed when the extension icon is clicked -->
+<!-- If you make a change here, you only have to re-open the pop-up to see the effect -->
+<!doctype html>
+<html>
+  <head>
+    <title>Mocking Bird</title>
+    <style>
+		body {
+			min-width: 600px;
+			overflow-x: hidden;
+		}
+		img {
+			margin: 5px;
+			border: 2px solid black;
+			vertical-align: middle;
+			width: 75px;
+			height: 75px;
+		}
+		
+		.divtext {
+			border: ridge 2px;
+			padding: 5px;
+			width: 20em;
+			min-height: 5em;
+			overflow: auto;
+		}
+		pre[contenteditable]{
+			border: 1px solid black;
+			overflow: auto;
+			padding: 5px;
+			background-color: white
+		}
+		.status {
+			text-align:right;
+			font-weight: bold;
+		}
+		body {
+			background: #cedbe9; /* Old browsers */
+			background: -moz-linear-gradient(-45deg,  #cedbe9 0%, #aac5de 17%, #6199c7 50%, #3a84c3 51%, #419ad6 59%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#cedbe9), color-stop(17%,#aac5de), color-stop(50%,#6199c7), color-stop(51%,#3a84c3), color-stop(59%,#419ad6), color-stop(71%,#4bb8f0),color-stop(84%,#3a8bc2), color-stop(100%,#26558b)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(-45deg,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(-45deg,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(-45deg,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%); /* IE10+ */
+			background: linear-gradient(135deg,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		}
+		button.recording {
+			background: url('img/stop.png') no-repeat 0 0;
+			background-size: 100% 100%;
+			height: 28px;
+			width: 28px;
+			padding: 0px;
+			border:none;
+		}
+		button.record {
+			background: url('img/record.png') no-repeat 0 0;
+			background-size: 100% 100%;
+			height: 28px;
+			width: 28px;
+			padding: 0px;
+			border:none;
+		}
+		button:focus {
+			outline: 0px;
+		}
+    </style>
+  </head>
+  <body>
+	<button class="record" style="float:left;" id="recordButtton"></button>
+	<p id="status"> Press to being recording.</p>
+	<pre contenteditable id="output"></pre>
+	<button id="clearButton">Clear</button>
+	<!--<button id="testButton">Test</button>-->
+    <script src="popup.js"></script>
+  </body>
+</html>
+
